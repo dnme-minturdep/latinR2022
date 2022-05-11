@@ -1,0 +1,66 @@
+---
+type: oral   # List of types is available using latinr_types()
+language: spanish
+title: "d4t4tur: las estadísticas de tuRismo en Argentina"
+authors:
+  - first_name: Juan Pablo
+    last_name: Ruiz Nicolini
+    email: jruiznicolini@turismo.gob.ar   # One author's email has to match the email registered in EasyChair.
+    country: ar  # List of countries available using latinr::latinr_countries()
+    affiliation: "Dirección Nacional de Mercados y Estadística - Subsecretaría de Desarrollo Estratégico - Minsiterio de Turismo y Deportes de la Nación"
+    url: "https://www.yvera.tur.ar/sinta/"  # Optional 
+    corresponding: true
+  - first_name: Pablo 
+    last_name: Tiscornia
+    email: ptiscornia@turismo.gob.ar
+    affiliation: "Dirección Nacional de Mercados y Estadística - Subsecretaría de Desarrollo Estratégico - Minsiterio de Turismo y Deportes de la Nación"
+    url: "https://www.yvera.tur.ar/sinta/"  # Optional 
+    corresponding: false
+keywords: 
+  - "Estadísticas Públicas"
+  - "Turismo"
+  - "Argentina"
+abstract: |
+  Una experiencai de cómo implementamos flujos de trabajo reproducibles y abiertos en un equipo que trabaja y produce estadísticas públicas. 
+bibliography: latinr_bibliography.bib
+biblio-style: apalike-es   
+output: 
+    latinr::latinr_article:
+      keep_tex: false
+      anonymise: false
+params: 
+  check_is_error: FALSE
+---
+
+
+```{r submission-checks, echo=FALSE, warning=TRUE}
+# Runs some basic checks in metadata. To disable, set check_is_error to FALSE
+latinr::latinr_checks(rmarkdown::metadata, params$check_is_error)
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.[@Nuncio2011]
