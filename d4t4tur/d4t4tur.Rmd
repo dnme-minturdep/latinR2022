@@ -10,12 +10,6 @@ authors:
     affiliation: "Dirección Nacional de Mercados y Estadística - Subsecretaría de Desarrollo Estratégico - Minsiterio de Turismo y Deportes de la Nación"
     url: "https://www.yvera.tur.ar/sinta/"  # Optional 
     corresponding: true
-  - first_name: Pablo 
-    last_name: Tiscornia
-    email: ptiscornia@turismo.gob.ar
-    affiliation: "Dirección Nacional de Mercados y Estadística - Subsecretaría de Desarrollo Estratégico - Minsiterio de Turismo y Deportes de la Nación"
-    url: "https://www.yvera.tur.ar/sinta/"  # Optional 
-    corresponding: false
 keywords: 
   - "Estadísticas Públicas"
   - "Turismo"
@@ -43,4 +37,21 @@ latinr::latinr_checks(rmarkdown::metadata, params$check_is_error)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## d4t4tur
+## d4t4tur - flujo de tRabajo
+
+1. Cómo lo hacemos?  
+  - RStudio Server
+  - .git
+  - Desarrollo de paquetes
+    + {comunicación}
+    + {herramientas}
+  - Capacitación 
+2. Comunicación
+  - {distill}
+  - _Shiny_
+  - {bookdown} / {pagedown}
+  - blog
+3. Datos Abiertos
+  - {ckanR}
+
+
