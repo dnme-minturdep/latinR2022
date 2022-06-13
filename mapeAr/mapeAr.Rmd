@@ -1,0 +1,42 @@
+---
+type: oral   # List of types is available using latinr_types()
+language: spanish
+title: "mapeAr: aplicación interactiva para visualizar información geográfica del turismo"
+authors:
+  - first_name: Elián 
+    last_name: Soutullo
+    email: esoutullo@turismo.gob.ar   # One author's email has to match the email registered in EasyChair.
+    country: ar  # List of countries available using latinr::latinr_countries()
+    affiliation: "Dirección Nacional de Mercados y Estadística - Subsecretaría de Desarrollo Estratégico - Minsiterio de Turismo y Deportes de la Nación"
+    url: "https://www.yvera.tur.ar/sinta/"  # Optional 
+    corresponding: true
+keywords: 
+  - "Estadísticas Públicas"
+  - "Turismo"
+  - "Argentina"
+  - "Shiny"
+  - "dataviz"
+abstract: |
+  Desarrollo de una shiny app para generar una herramienta interactiva para la realización de mapas con información georefernciada del turismo en Argentina.  
+bibliography: latinr_bibliography.bib
+biblio-style: apalike-es   
+output: 
+    latinr::latinr_article:
+      keep_tex: false
+      anonymise: false
+params: 
+  check_is_error: FALSE
+---
+
+
+```{r submission-checks, echo=FALSE, warning=TRUE}
+# Runs some basic checks in metadata. To disable, set check_is_error to FALSE
+latinr::latinr_checks(rmarkdown::metadata, params$check_is_error)
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## mepeAr - 
