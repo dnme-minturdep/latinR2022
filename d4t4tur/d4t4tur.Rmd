@@ -67,7 +67,6 @@ De un tiempo a esta parte, la DNMyE viene encarando un proyecto de transformaci�
 
 El proceso no fue lineal, sino que se fueron incorporando herramientas y tecnologías en la medida que se generaban nuevos productos. Paulatinamente la producción de informes, que tradicionalmente se hacían en procesadores de texto o planillas de cálculo, se empezaron a generar con código fuente. Con el tiempo estos informes se fueron convirtiendo en reportes interactivos y luego derivando en tableros como soporte alternativo para la consulta de información. La generación de estas nuevas formas de acceder a datos y estadísticas producidas por la DNMyE nos llevó a organizar de un nuevo modo la comunicación de estos productos.
 
-
 ```{r fig.align='center', out.width = '50%', echo = FALSE}
 
 knitr::include_graphics("sinta.png")
@@ -79,11 +78,11 @@ knitr::include_graphics("sinta.png")
 
 El [**Sistema de Información Turística de la Argentina (SINTA)**](https://www.yvera.tur.ar/sinta/) es el resultado de esta experiencia. Un portal único, en constante actualización, que ofrece una multiplicidad de maneras de acceder a la información y datos producidos por la DNMyE, muchos de ellos trabajados con **R** de punta a punta. Destacamos acá:
 
-1.  el procesamiento de los datos publicados en el **Portal de Datos Abiertos** ([datos.yvera.tur.ar](http://datos.yvera.gob.ar/ "Datos Abiertos de Turismo")) que se administra con el paquete `{ckanr}`.
+1.  el procesamiento de los datos publicados en el **Portal de Datos Abiertos** ([datos.yvera.tur.ar](http://datos.yvera.gob.ar/ "Datos Abiertos de Turismo")) que se administra con el paquete \CRANpkg{ckanr}[@ckanr].
 
-2.  **Documentos Técnicos** gracias al soporte de`{bookdown}`, en el marco del programa de **ARMONIZACIÓN** de las estadísticas de turismo en las provincias ([armonizacion.yvera.tur.ar](https://armonizacion.yvera.tur.ar/ "ARMONIZACION ESTADISTICA EN LAS PROVINCIAS")) y la generación de **INFORMES** ([yvera.tur.ar/informes](https://www.yvera.tur.ar/sinta/informe)) a partir de *templates* generados con `{pagedown}` .
+2.  **Documentos Técnicos** gracias al soporte de \CRANpkg{bookdown}[@bookdown], en el marco del programa de **ARMONIZACIÓN** de las estadísticas de turismo en las provincias ([armonizacion.yvera.tur.ar](https://armonizacion.yvera.tur.ar/ "ARMONIZACION ESTADISTICA EN LAS PROVINCIAS")) y la generación de **INFORMES** ([yvera.tur.ar/informes](https://www.yvera.tur.ar/sinta/informe)) a partir de *templates* generados con (\CRANpkg{pagedown}[@pagedown]).
 
-3.  una serie de micrositios generados con `{distill}`:
+3.  una serie de micrositios generados con\CRANpkg{distill}[@distill]
 
 -   el *blog* **BITÁCORA** ([bitacora.yvera.tur.ar](https://bitacora.yvera.tur.ar/ "BLOG - Bitácora del Turismo en Argentina"))
 
@@ -93,7 +92,7 @@ El [**Sistema de Información Turística de la Argentina (SINTA)**](https://www.
 
 -   un micrositio para la consulta interactiva de últimos datos - REPORTES- e información desagregada - **TABLEROS** ([tableros.yvera.tur.ar](https://tableros.yvera.tur.ar/)).
 
-    -   entre los desarrollos de aplicaciones con `{shiny}` se destacan los tableros de consulta de datos de **(i)** turismo internacional, **(ii)** del padrón único nacional de alojamientos y de **(iii)** conectividad aerocomercial - de pronta publicación.
+    -   entre los desarrollos de aplicaciones con \CRANpkg{shiny}[@shiny] se destacan los tableros de consulta de datos de **(i)** turismo internacional, **(ii)** del padrón único nacional de alojamientos y de **(iii)** conectividad aerocomercial - de pronta publicación.
 
 **HERRAMIENTAS**
 
@@ -101,9 +100,10 @@ Por último, con la acumulación de experiencias, empezamos a sistematizar buena
 
 En este sentido, por ejemplo, empezamos el desarrollo de paquetes que nos facilitan los pasos típicos en nuestro flujo usual de trabajo:
 
--   Con [**`{herramientas}`**](https://github.com/dnme-minturdep/herramientas) buscamos simplificar tareas cotidanas de acceso a datos en los servidores, limpieza de determinada clases de variables o cálculos usuales de indicadores.
+-   Con [**`{herramientas}`**](https://github.com/dnme-minturdep/herramientas) (@herramientas)buscamos simplificar tareas cotidanas de acceso a datos en los servidores, limpieza de determinada clases de variables o cálculos usuales de indicadores.
 
--   Con [**`{comunicacion}`**](https://github.com/dnme-minturdep/comunicacion), por otro lado, podemos generar informes, reportes o visualizaciones que utilizan los parametros y estilos de la comunicación oficial.
+-   Con [**`{comunicacion}`**](https://github.com/dnme-minturdep/comunicacion)(@comunicacion), por otro lado, podemos generar informes, reportes o visualizaciones que utilizan los parametros y estilos de la comunicación oficial.
 
--   Por último vale mencionar a ️ ***mapeAr** [tableros.yvera.tur.ar/mapeAr](https://tableros.yvera.tur.ar/mapeAr)*. Una herramienta creada con *Shiny*, también presente en esta convocatoria, que permite la generación de visualizaciones georeferenciadas a través de una interfaz sin necesidad de tener conocimientos de programación o de **R** en particular. 
+-   Por último vale mencionar a ️ ***mapeAr**[tableros.yvera.tur.ar/mapeAr](https://tableros.yvera.tur.ar/mapeAr)*. Una herramienta creada con *Shiny*, también presente en esta convocatoria, que permite la generación de visualizaciones georeferenciadas a través de una interfaz sin necesidad de tener conocimientos de programación o de **R** en particular.
 
+# Referencias
