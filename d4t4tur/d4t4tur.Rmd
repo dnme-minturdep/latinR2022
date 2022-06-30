@@ -94,11 +94,11 @@ knitr::include_graphics("sinta.png")
 
 El [**Sistema de Información Turística de la Argentina (SINTA)**](https://www.yvera.tur.ar/sinta/) es el resultado de esta experiencia. Un portal único, en constante actualización, que ofrece una multiplicidad de formas de acceso a la información y datos producidos por la DNMyE, muchos de ellos trabajados con **R** de punta a punta. Destacamos acá:
 
-1.  el procesamiento de los datos publicados en el **Portal de Datos Abiertos** ([datos.yvera.tur.ar](http://datos.yvera.gob.ar/ "Datos Abiertos de Turismo")) que se administra con el paquete \CRANpkg{ckanr}[@ckanr],
+1.  el procesamiento de los datos publicados en el **Portal de Datos Abiertos** ([datos.yvera.tur.ar](http://datos.yvera.gob.ar/ "Datos Abiertos de Turismo")) que se administra con el paquete \CRANpkg{ckanr} [@ckanr].
 
-2.  la producción de **Documentos Técnicos** gracias al soporte de \CRANpkg{bookdown}[@bookdown], en el marco del programa de **ARMONIZACIÓN** de las estadísticas de turismo en las provincias ([armonizacion.yvera.tur.ar](https://armonizacion.yvera.tur.ar/ "ARMONIZACION ESTADISTICA EN LAS PROVINCIAS")) y la generación de **INFORMES** ([yvera.tur.ar/informes](https://www.yvera.tur.ar/sinta/informe)) a partir de *templates* generados con (\CRANpkg{pagedown}[@pagedown]).
+2.  la producción de **Documentos Técnicos** gracias al soporte de \CRANpkg{bookdown} [@bookdown], en el marco del programa de **ARMONIZACIÓN** de las estadísticas de turismo en las provincias ([armonizacion.yvera.tur.ar](https://armonizacion.yvera.tur.ar/ "ARMONIZACION ESTADISTICA EN LAS PROVINCIAS")) y la generación de **INFORMES** ([yvera.tur.ar/informes](https://www.yvera.tur.ar/sinta/informe)) a partir de *templates* generados con \CRANpkg{pagedown} [@pagedown].
 
-3.  una serie de micrositios generados con \CRANpkg{distill}[@distill]
+3.  una serie de micrositios generados con \CRANpkg{distill} [@distill].
 
 -   el *blog* **BITÁCORA** ([bitacora.yvera.tur.ar](https://bitacora.yvera.tur.ar/ "BLOG - Bitácora del Turismo en Argentina"))
 
@@ -106,20 +106,18 @@ El [**Sistema de Información Turística de la Argentina (SINTA)**](https://www.
 
     -   el proyecto de **ARMONIZACION** antes citado y un **MONITOR** con indicadores agrupados a nivel provincial ([provincias.yvera.tur.ar](https://provincias.yvera.tur.ar/ "MONITOR del turismo en las provincias")) .
 
--   un micrositio para la consulta interactiva de últimos datos - REPORTES- e información desagregada - **TABLEROS** ([tableros.yvera.tur.ar](https://tableros.yvera.tur.ar/)).
+-   un micrositio para la consulta interactiva de últimos datos - **REPORTES**- e información desagregada -**TABLEROS** ([tableros.yvera.tur.ar](https://tableros.yvera.tur.ar/)).
 
-    -   entre los desarrollos de aplicaciones con \CRANpkg{shiny}[@shiny] se destacan los tableros de consulta de datos de **(i)** turismo internacional, **(ii)** del padrón único nacional de alojamientos y de **(iii)** conectividad aerocomercial - de pronta publicación.
+    -   entre los desarrollos de aplicaciones con \CRANpkg{shiny} -[@shiny]- se destacan los tableros de consulta de datos de **(i)** turismo internacional, **(ii)** del padrón único nacional de alojamientos y de **(iii)** conectividad aerocomercial - de pronta publicación.
 
 
 **HERRAMIENTAS**
 
-Por último, con la acumulación de experiencias, empezamos a sistematizar buena parte del trabajo en herramientas que nos permiten un flujo de trabajo más eficiente, buscando reducir en lo posible la repetición de tareas o procesos reduciendo la posibilidad de errores, automatizando flujos de trabajo y permitiendo el control de cambios para administrar la evolución de los proyectos.
+Por último, con la acumulación de experiencias, empezamos a sistematizar buena parte del trabajo en herramientas que nos permiten un flujo de trabajo más eficiente, buscando reducir en lo posible la repetición de tareas o procesos reduciendo la posibilidad de errores, automatizando flujos de trabajo y permitiendo el control de cambios para administrar la evolución de los proyectos. En este sentido es que avanzamos con el desarrollo de **paquetes en R** que nos facilitan los pasos típicos en nuestro flujo usual de trabajo:
 
-En este sentido es que avanzamos con el desarrollo de **paquetes en R** que nos facilitan los pasos típicos en nuestro flujo usual de trabajo:
+-   Con [**`{herramientas}`**](https://github.com/dnme-minturdep/herramientas) [@herramientas] buscamos simplificar tareas cotidianas de acceso a datos en los servidores, limpieza de determinada clases de variables o cálculos usuales de indicadores.
 
--   Con [**`{herramientas}`**](https://github.com/dnme-minturdep/herramientas) (@herramientas) buscamos simplificar tareas cotidianas de acceso a datos en los servidores, limpieza de determinada clases de variables o cálculos usuales de indicadores.
-
--   Con [**`{comunicacion}`**](https://github.com/dnme-minturdep/comunicacion) (@comunicacion), por otro lado, podemos generar informes, reportes o visualizaciones que utilizan los parámetros y estilos de la comunicación oficial.
+-   Con [**`{comunicacion}`**](https://github.com/dnme-minturdep/comunicacion) [@comunicacion], por otro lado, podemos generar informes, reportes o visualizaciones que utilizan los parámetros y estilos de la comunicación oficial.
 
 -   Por último vale mencionar a _**mapeAr** [tableros.yvera.tur.ar/mapeAr](https://tableros.yvera.tur.ar/mapeAr)_. Una herramienta creada con *Shiny*, también presente en esta convocatoria, que permite la generación de visualizaciones georeferenciadas a través de una interfaz, sin necesidad de tener conocimientos de programación o de **R** en particular.
 
