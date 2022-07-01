@@ -48,9 +48,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 La Dirección Nacional de Mercados y Estadísticas (DNMyE) de la Subsecretaría de Desarrollo Estratégico del Ministerio de Turismo y Deportes de la Nación (MTyD), es la responsable de las estadísticas de turismo en el marco del sistema estadístico nacional. Como tal, entre otras actividades, lleva adelante:
 
-(i) la coordinación de operativos estadísticos[^1] destinados a la producción de indicadores para la caracterización del turismo;
+(i) la coordinación de operativos estadísticos destinados a la producción de indicadores para la caracterización del turismo[^1];
 
-(ii) la armonización, explotación y análisis de una variedad de registros administrativos[^2]
+(ii) la armonización, explotación y análisis de una variedad de registros administrativos[^2].
 
 [^1]: Los mismos son la ***Encuesta de Ocupación Hotelera (EOH)*** y la ***Encuesta de Turismo Internacional (ETI)***, junto al Instituto Nacional de Estadísticas y Censos (INDEC); y, por cuenta propia, la ***Encuesta de Viaje y Turismo de los Hogares (EVyTH).***
 
@@ -67,22 +67,22 @@ De un tiempo a esta parte, la DNMyE viene encarando un proyecto de transformaci�
 
 **Primeros pasos**: 
 
--   el punto de partida consistió en armar un *stack* de trabajo, donde **R** juega un rol central,
+-   el punto de partida consistió en armar un *stack* de trabajo, donde **R** juega un rol central;
 
--   se creo una instancia de capacitación interna con el objetivo de acercar al equipo de trabajo de la dirección (muches con experiencia de análisis estadístico, otres con práctica en programación en diferentes *softwares* -en su mayoría propietarios-) el uso de estas nuevas herramientas y bajar la curva de aprendizaje[^3]. Esta capacitación inicial devino en encuentros semanales dedicados a compartir problemáticas específicas y avanzar sobre diferentes temáticas en cuanto el procesamiento de datos con **R**,
+-   se creo una instancia de capacitación interna con el objetivo de acercar al equipo de trabajo de la dirección (muches con experiencia de análisis estadístico, otres con práctica en programación en diferentes *softwares* -en su mayoría propietarios-) el uso de estas nuevas herramientas y bajar la curva de aprendizaje[^3]. Esta capacitación inicial devino en encuentros semanales dedicados a compartir problemáticas específicas y avanzar sobre diferentes temáticas en cuanto el procesamiento de datos con **R**;
 
--   se procuró la creación y configuración de un servidor dedicado para la DNMyE donde corre un [RStudio Server](https://www.rstudio.com/products/rstudio/download-server/). En él, cada usuarie cuenta con un acceso para poder hacer uso del *software* desde un navegador[^4]. El mismo permite, además, desplegar aplicaciones (*Shiny)* y un sistema de archivos que permite a todes hacer uso de las fuentes de datos necesarias para cada proceso,
+-   se procuró la creación y configuración de un servidor dedicado para la DNMyE donde corre un **[RStudio Server](https://www.rstudio.com/products/rstudio/download-server/)**. En él, cada usuarie cuenta con un acceso para poder hacer uso del *software* desde un navegador[^4]. El mismo permite, además, desplegar aplicaciones (*Shiny)* y un sistema de archivos que permite a todes hacer uso de las fuentes de datos necesarias para cada proceso;
 
--   se creo un repositorio de organización (*de desarrollo*) en *GitHub*, el cual permitió acumular la producción de código y trabajar con un sistema de control de versiones. Con el paso del tiempo se creo un segundo repositorio (*de producción*) donde paulatinamente se van publicando aplicaciones *Shiny*, libros digitales y reportes, entre otros: <http://github.com/dnmye-minturdep/>
+-   se creo un repositorio de organización (*de desarrollo*) en *GitHub*, el cual permitió acumular la producción de código y trabajar con un sistema de control de versiones. Con el paso del tiempo se creo un segundo repositorio (*de producción*) donde paulatinamente se van publicando aplicaciones *Shiny*, libros digitales y reportes, entre otros: **<http://github.com/dnmye-minturdep/>**.
 
 
 [^3]: En el contexto del trabajo remoto, a causa de las restricciones a la movilidad por la pandemia del Covid19, esta organización nos permitió abordar problemas de administración de bases de datos y el mantenimiento de librerías, por ejemplo, que aseguraran la reproducibilidad del trabajo.
 
-[^4]: Este espacio de encuentro interno se formalizó luego también en un esquema de capacitaciones destinado a agentes que cumplen funciones técnicas en las oficinas encargadas de las estadíticas de turismo, no solamente del gobierno nacional, sino también de gobiernos provinciales y locales. El material (*bookdown* y videos de las capacitaciones se encuentran alojadas en [armonziacion.yvera.tur.ar](https://armonizacion.yvera.tur.ar/ "ARMONIZACION ESTADISTICA EN LAS PROVINCIAS")).
+[^4]: Este espacio de encuentro interno se formalizó luego también en un esquema de capacitaciones destinado a agentes que cumplen funciones técnicas en las oficinas encargadas de las estadíticas de turismo, no solamente del gobierno nacional, sino también de gobiernos provinciales y locales. El material (**:_bookdown_** y videos de las capacitaciones se encuentran alojadas en **[armonziacion.yvera.tur.ar](https://armonizacion.yvera.tur.ar/ "ARMONIZACION ESTADISTICA EN LAS PROVINCIAS")**).
 
 
 
-El proceso no fue lineal, se fueron incorporando herramientas y tecnologías en la medida que se generaban nuevos productos y demandas desde diferentes necesidades. Paulatinamente, la producción de informes, tradicionalmente producidos en procesadores de texto o planillas de cálculo, comenzó a desarrollarso con código fuente. Con el tiempo estos informes se fueron convirtiendo en reportes interactivos y luego derivando en tableros como soporte alternativo para la consulta de información. La generación de estas nuevas formas de acceder a datos y estadísticas producidas por la DNMyE nos llevó a organizar de un nuevo modo la comunicación de estos productos.
+El proceso no fue lineal, se fueron incorporando herramientas y tecnologías en la medida que se generaban nuevos productos y demandas. Paulatinamente, la generación de informes, tradicionalmente producidos en procesadores de texto o planillas de cálculo, comenzó a desarrollarse con código fuente. Con el tiempo estos informes se fueron convirtiendo en reportes interactivos y luego derivando en tableros como soporte alternativo para la consulta de información. La generación de estas nuevas formas de acceder a datos y estadísticas producidas por la DNMyE nos llevó a organizar de un nuevo modo la comunicación de estos productos.
 
 ```{r fig.align='center', out.width = '50%', echo = FALSE}
 
@@ -94,21 +94,19 @@ knitr::include_graphics("sinta.png")
 
 El [**Sistema de Información Turística de la Argentina (SINTA)**](https://www.yvera.tur.ar/sinta/) es el resultado de esta experiencia. Un portal único, en constante actualización, que ofrece una multiplicidad de formas de acceso a la información y datos producidos por la DNMyE, muchos de ellos trabajados con **R** de punta a punta. Destacamos acá:
 
-1.  el procesamiento de los datos publicados en el **Portal de Datos Abiertos** ([datos.yvera.tur.ar](http://datos.yvera.gob.ar/ "Datos Abiertos de Turismo")) que se administra con el paquete \CRANpkg{ckanr} [@ckanr].
+1.  el procesamiento de los datos publicados en el **Portal de Datos Abiertos ([datos.yvera.tur.ar](http://datos.yvera.gob.ar/ "Datos Abiertos de Turismo"))** que se administra con el paquete \CRANpkg{ckanr} [@ckanr].
 
-2.  la producción de **Documentos Técnicos** gracias al soporte de \CRANpkg{bookdown} [@bookdown], en el marco del programa de **ARMONIZACIÓN** de las estadísticas de turismo en las provincias ([armonizacion.yvera.tur.ar](https://armonizacion.yvera.tur.ar/ "ARMONIZACION ESTADISTICA EN LAS PROVINCIAS")) y la generación de **INFORMES** ([yvera.tur.ar/informes](https://www.yvera.tur.ar/sinta/informe)) a partir de *templates* generados con \CRANpkg{pagedown} [@pagedown].
+2.  la producción de **Documentos Técnicos** gracias al soporte de \CRANpkg{bookdown} [@bookdown], en el marco del programa de **ARMONIZACIÓN** de las estadísticas de turismo en las provincias y la generación de **INFORMES ([yvera.tur.ar/informes](https://www.yvera.tur.ar/sinta/informe))** a partir de *templates* generados con \CRANpkg{pagedown} [@pagedown].
 
 3.  una serie de micrositios generados con \CRANpkg{distill} [@distill].
 
--   el *blog* **BITÁCORA** ([bitacora.yvera.tur.ar](https://bitacora.yvera.tur.ar/ "BLOG - Bitácora del Turismo en Argentina"))
+  -   el *blog* **BITÁCORA ([bitacora.yvera.tur.ar](https://bitacora.yvera.tur.ar/ "BLOG - Bitácora del Turismo en Argentina"))**;
 
--   micrositios de estadísticas desde una perspectiva federal:
+  -   micrositios de estadísticas desde una perspectiva federal: el proyecto de **ARMONIZACION** antes citado ([armonizacion.yvera.tur.ar](https://armonizacion.yvera.tur.ar/ "ARMONIZACION ESTADISTICA EN LAS PROVINCIAS"))y un **MONITOR** con indicadores agrupados a nivel provincial ([provincias.yvera.tur.ar](https://provincias.yvera.tur.ar/ "MONITOR del turismo en las provincias")).
 
-    -   el proyecto de **ARMONIZACION** antes citado y un **MONITOR** con indicadores agrupados a nivel provincial ([provincias.yvera.tur.ar](https://provincias.yvera.tur.ar/ "MONITOR del turismo en las provincias")) .
+  -   un micrositio para la consulta interactiva de últimos datos - **REPORTES**- e información desagregada en -**TABLEROS** ([tableros.yvera.tur.ar](https://tableros.yvera.tur.ar/)).
 
--   un micrositio para la consulta interactiva de últimos datos - **REPORTES**- e información desagregada -**TABLEROS** ([tableros.yvera.tur.ar](https://tableros.yvera.tur.ar/)).
-
-    -   entre los desarrollos de aplicaciones con \CRANpkg{shiny} -[@shiny]- se destacan los tableros de consulta de datos de **(i)** turismo internacional, **(ii)** del padrón único nacional de alojamientos y de **(iii)** conectividad aerocomercial - de pronta publicación.
+  -  entre los desarrollos de aplicaciones con \CRANpkg{shiny} [@shiny] se destacan los tableros de consulta de datos de **(i)** turismo internacional, **(ii)** del padrón único nacional de alojamientos y de **(iii)** conectividad aerocomercial - de pronta publicación.
 
 
 **HERRAMIENTAS**
@@ -119,7 +117,7 @@ Por último, con la acumulación de experiencias, empezamos a sistematizar buena
 
 -   Con [**`{comunicacion}`**](https://github.com/dnme-minturdep/comunicacion) [@comunicacion], por otro lado, podemos generar informes, reportes o visualizaciones que utilizan los parámetros y estilos de la comunicación oficial.
 
--   Por último vale mencionar a _**mapeAr** [tableros.yvera.tur.ar/mapeAr](https://tableros.yvera.tur.ar/mapeAr)_. Una herramienta creada con *Shiny*, también presente en esta convocatoria, que permite la generación de visualizaciones georeferenciadas a través de una interfaz, sin necesidad de tener conocimientos de programación o de **R** en particular.
+-   Por último vale mencionar a _**mapeAr**_ ([tableros.yvera.tur.ar/mapeAr](https://tableros.yvera.tur.ar/mapeAr)). Una herramienta creada con *Shiny*, también presente en esta convocatoria, que permite la generación de visualizaciones georeferenciadas a través de una interfaz, sin necesidad de tener conocimientos de programación o de **R** en particular.
 
 
 # Referencias
