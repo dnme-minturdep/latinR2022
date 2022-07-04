@@ -1,7 +1,7 @@
 ---
 type: oral   # List of types is available using latinr_types()
 language: spanish
-title: "d4t4tur: las estadísticas de tuRismo en Argentina"
+title: "TuRismo en Argentina"
 authors:
   - first_name: Juan Pablo
     last_name: Ruiz Nicolini
@@ -60,7 +60,7 @@ La Dirección Nacional de Mercados y Estadísticas (DNMyE) de la Subsecretaría 
 
 Este conjunto de tareas requiere de una serie de procesos que implican la captura, limpieza, consistencia, consolidación, análisis y comunicación de datos que provienen de múltiples fuentes, con diversos formatos y estructuras.
 
-## d4t4tur: un nuevo flujo de trabajo
+## Un nuevo flujo de trabajo
 
 De un tiempo a esta parte, la DNMyE viene encarando un proyecto de transformación de los procesos detrás de las acciones antes reseñadas. Con un diagnóstico inicial de que se podía avanzar en la implementación de un flujo de trabajo más sistemático y reproducible; que implicara la apertura de fuentes de datos y de procesos; y que pudiera ser compartido en diversos soportes con usuarios potenciales diversos, se decidió avanzar en un plan de trabajo para lograr esos objetivos.
 
@@ -78,7 +78,7 @@ De un tiempo a esta parte, la DNMyE viene encarando un proyecto de transformaci�
 
 [^3]: En el contexto del trabajo remoto, a causa de las restricciones a la movilidad por la pandemia del Covid19, esta organización nos permitió abordar problemas de administración de bases de datos y el mantenimiento de librerías, por ejemplo, que aseguraran la reproducibilidad del trabajo.
 
-[^4]: Este espacio de encuentro interno se formalizó luego también en un esquema de capacitaciones destinado a agentes que cumplen funciones técnicas en las oficinas encargadas de las estadíticas de turismo, no solamente del gobierno nacional, sino también de gobiernos provinciales y locales. El material (**:_bookdown_** y videos de las capacitaciones se encuentran alojadas en **[armonziacion.yvera.tur.ar](https://armonizacion.yvera.tur.ar/ "ARMONIZACION ESTADISTICA EN LAS PROVINCIAS")**).
+[^4]: Este espacio de encuentro interno se formalizó luego también en un esquema de capacitaciones destinado a agentes que cumplen funciones técnicas en las oficinas encargadas de las estadíticas de turismo, no solamente del gobierno nacional, sino también de gobiernos provinciales y locales. El material (**_bookdown_** y videos de las capacitaciones se encuentran alojadas en **[armonziacion.yvera.tur.ar](https://armonizacion.yvera.tur.ar/ "ARMONIZACION ESTADISTICA EN LAS PROVINCIAS")**).
 
 
 
