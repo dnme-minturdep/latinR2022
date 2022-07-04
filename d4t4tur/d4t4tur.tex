@@ -1,0 +1,346 @@
+\documentclass[letterpaper]{report}
+%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{RJournal}
+\usepackage{amsmath,amssymb,array}
+\usepackage{booktabs}
+
+%% load any required packages here
+
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+
+\hypersetup{pdftitle={TuRismo en Argentina},
+            pdfkeywords={Estadísticas
+Públicas; Turismo; Argentina; Software libre; Código abierto}}
+
+
+
+\hypersetup{pdfauthor=Anónimo}
+
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{CSLReferences}%
+{\setlength{\parindent}{0pt}%
+\everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
+{\par}
+%\usepackage[hidelinks]{hyperref}
+
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}} 
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+
+\providecommand{\keywords}[1]{\noindent\textbf{Palabras clave:} #1}
+\providecommand{\tightlist}{%
+\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+\begin{document}
+
+%% do not edit, for illustration only
+\sectionhead{TuRismo en Argentina}
+\year{2022}
+
+\begin{article}
+
+\title{TuRismo en Argentina}
+
+
+\author{Anónimo}
+
+\maketitle
+
+\abstract{
+Una experiencia de cómo implementamos flujos de trabajo reproducibles y
+abiertos en un equipo que produce, consolida y analiza estadísticas
+públicas.
+}
+
+\keywords{ Estadísticas Públicas  -  Turismo  -  Argentina  -  Software
+libre  -  Código abierto }
+
+\hypertarget{las-estaduxedsticas-de-turismo-en-la-argentina}{%
+\subsection{Las estadísticas de Turismo en la
+Argentina}\label{las-estaduxedsticas-de-turismo-en-la-argentina}}
+
+La Dirección Nacional de Mercados y Estadísticas (DNMyE) de la
+Subsecretaría de Desarrollo Estratégico del Ministerio de Turismo y
+Deportes de la Nación (MTyD), es la responsable de las estadísticas de
+turismo en el marco del sistema estadístico nacional. Como tal, entre
+otras actividades, lleva adelante:
+
+\begin{enumerate}
+\def\labelenumi{(\roman{enumi})}
+\item
+  la coordinación de operativos estadísticos destinados a la producción
+  de indicadores para la caracterización del turismo\footnote{Los mismos
+    son la \textbf{\emph{Encuesta de Ocupación Hotelera (EOH)}} y la
+    \textbf{\emph{Encuesta de Turismo Internacional (ETI)}}, junto al
+    Instituto Nacional de Estadísticas y Censos (INDEC); y, por cuenta
+    propia, la \textbf{\emph{Encuesta de Viaje y Turismo de los Hogares
+    (EVyTH).}}};
+\item
+  la armonización, explotación y análisis de una variedad de registros
+  administrativos\footnote{Ejemplos de ellos son (a) algunos producidos
+    en la orbita del MTyD - como registro de Agencias de Viajes; u
+    (b)otros gestionados y cedidos por organismos como la Dirección
+    Nacional de Migraciones (DNM - para la estimación del turismo
+    internacional por todas las vías); la Agencia Nacional de
+    Aeronavegación Comercial (ANAC - sobre oferta y demanda de vuelos,
+    tanto internacional como de cabotaje); la Comisión Nacional
+    Reguladora de Transporte (CNRT - con datos de registro de servicios
+    de transporte terrerstre), o la Administración de Parques Nacionales
+    (APN - con registros de visitaciones a áreas protegidas naturales de
+    adminsitración nacional).}.
+\end{enumerate}
+
+Este conjunto de tareas requiere de una serie de procesos que implican
+la captura, limpieza, consistencia, consolidación, análisis y
+comunicación de datos que provienen de múltiples fuentes, con diversos
+formatos y estructuras.
+
+\hypertarget{un-nuevo-flujo-de-trabajo}{%
+\subsection{Un nuevo flujo de trabajo}\label{un-nuevo-flujo-de-trabajo}}
+
+De un tiempo a esta parte, la DNMyE viene encarando un proyecto de
+transformación de los procesos detrás de las acciones antes reseñadas.
+Con un diagnóstico inicial de que se podía avanzar en la implementación
+de un flujo de trabajo más sistemático y reproducible; que implicara la
+apertura de fuentes de datos y de procesos; y que pudiera ser compartido
+en diversos soportes con usuarios potenciales diversos, se decidió
+avanzar en un plan de trabajo para lograr esos objetivos.
+
+\textbf{Primeros pasos}:
+
+\begin{itemize}
+\item
+  el punto de partida consistió en armar un \emph{stack} de trabajo,
+  donde \textbf{R} juega un rol central;
+\item
+  se creo una instancia de capacitación interna con el objetivo de
+  acercar al equipo de trabajo de la dirección (muches con experiencia
+  de análisis estadístico, otres con práctica en programación en
+  diferentes \emph{softwares} -en su mayoría propietarios-) el uso de
+  estas nuevas herramientas y bajar la curva de aprendizaje\footnote{En
+    el contexto del trabajo remoto, a causa de las restricciones a la
+    movilidad por la pandemia del Covid19, esta organización nos
+    permitió abordar problemas de administración de bases de datos y el
+    mantenimiento de librerías, por ejemplo, que aseguraran la
+    reproducibilidad del trabajo.}. Esta capacitación inicial devino en
+  encuentros semanales dedicados a compartir problemáticas específicas y
+  avanzar sobre diferentes temáticas en cuanto el procesamiento de datos
+  con \textbf{R};
+\item
+  se procuró la creación y configuración de un servidor dedicado para la
+  DNMyE donde corre un
+  \textbf{\href{https://www.rstudio.com/products/rstudio/download-server/}{RStudio
+  Server}}. En él, cada usuarie cuenta con un acceso para poder hacer
+  uso del \emph{software} desde un navegador\footnote{Este espacio de
+    encuentro interno se formalizó luego también en un esquema de
+    capacitaciones destinado a agentes que cumplen funciones técnicas en
+    las oficinas encargadas de las estadíticas de turismo, no solamente
+    del gobierno nacional, sino también de gobiernos provinciales y
+    locales. El material (\textbf{\emph{bookdown}} y videos de las
+    capacitaciones se encuentran alojadas en
+    \textbf{\href{https://armonizacion.yvera.tur.ar/}{armonziacion.yvera.tur.ar}}).}.
+  El mismo permite, además, desplegar aplicaciones (\emph{Shiny)} y un
+  sistema de archivos que permite a todes hacer uso de las fuentes de
+  datos necesarias para cada proceso;
+\item
+  se creo un repositorio de organización (\emph{de desarrollo}) en
+  \emph{GitHub}, el cual permitió acumular la producción de código y
+  trabajar con un sistema de control de versiones. Con el paso del
+  tiempo se creo un segundo repositorio (\emph{de producción}) donde
+  paulatinamente se van publicando aplicaciones \emph{Shiny}, libros
+  digitales y reportes, entre otros:
+  \textbf{\url{http://github.com/dnmye-minturdep/}}.
+\end{itemize}
+
+El proceso no fue lineal, se fueron incorporando herramientas y
+tecnologías en la medida que se generaban nuevos productos y demandas.
+Paulatinamente, la generación de informes, tradicionalmente producidos
+en procesadores de texto o planillas de cálculo, comenzó a desarrollarse
+con código fuente. Con el tiempo estos informes se fueron convirtiendo
+en reportes interactivos y luego derivando en tableros como soporte
+alternativo para la consulta de información. La generación de estas
+nuevas formas de acceder a datos y estadísticas producidas por la DNMyE
+nos llevó a organizar de un nuevo modo la comunicación de estos
+productos.
+
+\begin{center}\includegraphics[width=0.5\linewidth]{sinta} \end{center}
+
+\hypertarget{comunicaciuxf3n}{%
+\subsection{COMUNICACIÓN}\label{comunicaciuxf3n}}
+
+El \href{https://www.yvera.tur.ar/sinta/}{\textbf{Sistema de Información
+Turística de la Argentina (SINTA)}} es el resultado de esta experiencia.
+Un portal único, en constante actualización, que ofrece una
+multiplicidad de formas de acceso a la información y datos producidos
+por la DNMyE, muchos de ellos trabajados con \textbf{R} de punta a
+punta. Destacamos acá:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  el procesamiento de los datos publicados en el \textbf{Portal de Datos
+  Abiertos (\href{http://datos.yvera.gob.ar/}{datos.yvera.tur.ar})} que
+  se administra con el paquete \CRANpkg{ckanr} (Chamberlain et al.
+  2021).
+\item
+  la producción de \textbf{Documentos Técnicos} gracias al soporte de
+  \CRANpkg{bookdown} (Xie 2016), en el marco del programa de
+  \textbf{ARMONIZACIÓN} de las estadísticas de turismo en las provincias
+  y la generación de \textbf{INFORMES
+  (\href{https://www.yvera.tur.ar/sinta/informe}{yvera.tur.ar/informes})}
+  a partir de \emph{templates} generados con \CRANpkg{pagedown} (Xie et
+  al. 2021).
+\item
+  una serie de micrositios generados con \CRANpkg{distill} (Allaire et
+  al. 2021).
+\end{enumerate}
+
+\begin{itemize}
+\item
+  el \emph{blog} \textbf{BITÁCORA
+  (\href{https://bitacora.yvera.tur.ar/}{bitacora.yvera.tur.ar})};
+\item
+  micrositios de estadísticas desde una perspectiva federal: el proyecto
+  de \textbf{ARMONIZACION} antes citado
+  (\href{https://armonizacion.yvera.tur.ar/}{armonizacion.yvera.tur.ar})y
+  un \textbf{MONITOR} con indicadores agrupados a nivel provincial
+  (\href{https://provincias.yvera.tur.ar/}{provincias.yvera.tur.ar}).
+\item
+  un micrositio para la consulta interactiva de últimos datos -
+  \textbf{REPORTES}- e información desagregada en -\textbf{TABLEROS}
+  (\href{https://tableros.yvera.tur.ar/}{tableros.yvera.tur.ar}).
+\item
+  entre los desarrollos de aplicaciones con \CRANpkg{shiny} (Chang et
+  al. 2021) se destacan los tableros de consulta de datos de
+  \textbf{(i)} turismo internacional, \textbf{(ii)} del padrón único
+  nacional de alojamientos y de \textbf{(iii)} conectividad
+  aerocomercial - de pronta publicación.
+\end{itemize}
+
+\textbf{HERRAMIENTAS}
+
+Por último, con la acumulación de experiencias, empezamos a sistematizar
+buena parte del trabajo en herramientas que nos permiten un flujo de
+trabajo más eficiente, buscando reducir en lo posible la repetición de
+tareas o procesos reduciendo la posibilidad de errores, automatizando
+flujos de trabajo y permitiendo el control de cambios para administrar
+la evolución de los proyectos. En este sentido es que avanzamos con el
+desarrollo de \textbf{paquetes en R} que nos facilitan los pasos típicos
+en nuestro flujo usual de trabajo:
+
+\begin{itemize}
+\item
+  Con
+  \href{https://github.com/dnme-minturdep/herramientas}{\textbf{\texttt{\{herramientas\}}}}
+  (Tiscornia et al. 2022) buscamos simplificar tareas cotidianas de
+  acceso a datos en los servidores, limpieza de determinada clases de
+  variables o cálculos usuales de indicadores.
+\item
+  Con
+  \href{https://github.com/dnme-minturdep/comunicacion}{\textbf{\texttt{\{comunicacion\}}}}
+  (Tiscornia and Ruiz Nicolini 2022), por otro lado, podemos generar
+  informes, reportes o visualizaciones que utilizan los parámetros y
+  estilos de la comunicación oficial.
+\item
+  Por último vale mencionar a \emph{\textbf{mapeAr}}
+  (\href{https://tableros.yvera.tur.ar/mapeAr}{tableros.yvera.tur.ar/mapeAr}).
+  Una herramienta creada con \emph{Shiny}, también presente en esta
+  convocatoria, que permite la generación de visualizaciones
+  georeferenciadas a través de una interfaz, sin necesidad de tener
+  conocimientos de programación o de \textbf{R} en particular.
+\end{itemize}
+
+\hypertarget{referencias}{%
+\section*{Referencias}\label{referencias}}
+\addcontentsline{toc}{section}{Referencias}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-distill}{}}%
+Allaire, JJ, Rich Iannone, Alison Presmanes Hill, and Yihui Xie. 2021.
+\emph{Distill: 'R Markdown' Format for Scientific and Technical
+Writing}. \url{https://CRAN.R-project.org/package=distill}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-ckanr}{}}%
+Chamberlain, Scott, Imanuel Costigan, Wush Wu, Florian Mayer, and Sharla
+Gelfand. 2021. \emph{Ckanr: Client for the Comprehensive Knowledge
+Archive Network ('CKAN') API}.
+\url{https://CRAN.R-project.org/package=ckanr}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-shiny}{}}%
+Chang, Winston, Joe Cheng, JJ Allaire, Carson Sievert, Barret Schloerke,
+Yihui Xie, Jeff Allen, Jonathan McPherson, Alan Dipert, and Barbara
+Borges. 2021. \emph{Shiny: Web Application Framework for r}.
+\url{https://CRAN.R-project.org/package=shiny}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-herramientas}{}}%
+Tiscornia, Pablo, Juan Juara, Juan Urricariet, and Juan Pablo Ruiz
+Nicolini. 2022. \emph{Herramientas: Conjunto de Funciones Para El
+Procesamiento de Datos En La DNMyE}.
+\url{https://dnme-minturdep.github.io/herramientas/}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-comunicacion}{}}%
+Tiscornia, Pablo, and Juan Pablo Ruiz Nicolini. 2022.
+\emph{Comunicacion: DNMyE - Comunicación}.
+\url{https://d4t4tur.github.io/comunicacion}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-bookdown}{}}%
+Xie, Yihui. 2016. \emph{Bookdown: Authoring Books and Technical
+Documents with {R} Markdown}. Boca Raton, Florida: Chapman; Hall/CRC.
+\url{https://bookdown.org/yihui/bookdown}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-pagedown}{}}%
+Xie, Yihui, Romain Lesur, Brent Thorne, and Xianying Tan. 2021.
+\emph{Pagedown: Paginate the HTML Output of r Markdown with CSS for
+Print}. \url{https://CRAN.R-project.org/package=pagedown}.
+
+\end{CSLReferences}
+
+
+
+
+\end{article}
+\end{document}

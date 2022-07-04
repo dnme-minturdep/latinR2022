@@ -29,8 +29,8 @@ bibliography: latinr_bibliography.bib
 biblio-style: apalike-es   
 output: 
     latinr::latinr_article:
-      keep_tex: false
-      anonymise: false
+      keep_tex: true
+      anonymise: true
 params: 
   check_is_error: FALSE
 ---
