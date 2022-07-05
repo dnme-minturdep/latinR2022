@@ -29,8 +29,8 @@ bibliography: latinr_bibliography.bib
 biblio-style: apalike-es   
 output: 
     latinr::latinr_article:
-      keep_tex: false
-      anonymise: false
+      keep_tex: true
+      anonymise: true
 params: 
   check_is_error: FALSE
 ---
@@ -56,13 +56,11 @@ Sin embargo, la realización de un mapa que permita visualizar información geog
 
 En este sentido, contar con una herramienta de acceso libre para la representación de datos espaciales sin requerimientos de programación o diseño, supone una solución para diversos usuarios interesados en el tema.
 
-El paquete [{shiny}](https://shiny.rstudio.com/) ofrece una oportunidad para un desarrollo de estas características, al permitir construir una aplicación con una interfaz accesible (UI) y un trasfondo donde se procese la información geográfica (server).
+El paquete \CRANpkg{shiny} [@shiny] ofrece una oportunidad para un desarrollo de estas características, al permitir construir una aplicación con una interfaz accesible **([UI](https://github.com/dnme-minturdep/mapeAr/blob/main/ui.R))** y un trasfondo donde se procese la información geográfica **([server](https://github.com/dnme-minturdep/mapeAr/blob/main/server.R))**.
 
 ## mapeAr
 
-[**mapeAr**](https://tableros.yvera.tur.ar/mapeAr/) surge en este contexto como un recurso de la Dirección Nacional de Mercados y Estadística (DNMyE) en el marco del **Sistema de Información Turística de la Argentina (SINTA)**. 
-
-La plataforma consiste de dos pestañas, una con información sobre cómo utilizar la aplicación y otra con los controles y visualización para poder realizar un mapa. 
+[**mapeAr**](https://tableros.yvera.tur.ar/mapeAr/) surge en este contexto como un recurso de la Dirección Nacional de Mercados y Estadística (DNMyE) en el marco del [**Sistema de Información Turística de la Argentina (SINTA)**](https://www.yvera.tur.ar/sinta/). La plataforma consiste de dos pestañas, una con información sobre cómo utilizar la aplicación y otra con los controles y visualización para poder realizar un mapa. 
 
 ```{r out.width="80%", out.height= "30%"}
 knitr::include_graphics("imagenes/mapear.png")
@@ -70,7 +68,7 @@ knitr::include_graphics("imagenes/mapear.png")
 
 Por defecto la _shiny_ carga una capa con la geometría de Argentina y su división política (provincias). Esta es la denominada **capa base**, sobre la cual se pueden hacer algunas modificaciones (filtrar provincias específicas, agregar las etiquetas con los nombres, o los poligonos correspondientes a la región, por ejemplo). 
 
-Utilizando la lógica de [ggplot2](https://ggplot2.tidyverse.org/), la aplicación permite incorporar más capas de datos georeferenciados sobre la capa base. En la medida que se realicen incorporaciones o ajustes, los mismos se van impactando en la previsualización del mapa.
+Utilizando la lógica de \CRANpkg{ggplot2} [@ggplot2], la aplicación permite incorporar más capas de datos georeferenciados sobre la capa base. En la medida que se realicen incorporaciones o ajustes, los mismos se van impactando en la previsualización del mapa.
 
 En una primera instancia, se ofrece la posibilidad de cargar hasta dos capas predefinidas. Estas capas refieren a geometrías que ya se encuentran configuradas y son de uso común por parte de usuarios vinculados a la DNMyE, con el fin de facilitar su carga. Por ejemplo, la capa de "Vías Nacionales" ayuda a visualizar todas las rutas nacionales de Argentina sin la necesidad de tener que buscar un archivo con dicha información, descargarlo y subirlo a la _app_.
 
@@ -92,3 +90,6 @@ La interfaz de **mapeAr** permite al usuario personalizar algunos parámetros es
 
 Finalmente, con el botón de descarga se ofrece la posibilidad de exportar el mapa como imagen en distintos formatos, para poder compartirlo, utilizarlo en documentos o presentaciones, etc.
 
+\newpage
+
+# Referencias
