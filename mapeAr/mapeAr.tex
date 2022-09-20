@@ -16,8 +16,7 @@ información geográfica del turismo},
 Públicas; Turismo; Argentina; Shiny; dataviz}}
 
 
-
-\hypersetup{pdfauthor=Anónimo}
+\hypersetup{pdfauthor={Elián Soutullo, Juan Pablo Ruiz Nicolini}}
 
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
@@ -25,6 +24,7 @@ Públicas; Turismo; Argentina; Shiny; dataviz}}
 {\setlength{\parindent}{0pt}%
 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
 {\par}
+
 %\usepackage[hidelinks]{hyperref}
 
 \urlstyle{same}  % don't use monospace font for urls
@@ -80,15 +80,17 @@ Públicas; Turismo; Argentina; Shiny; dataviz}}
 %% do not edit, for illustration only
 \sectionhead{mapeAr: aplicación interactiva para visualizar información
 geográfica del turismo}
-\year{2022}
+\year{2021}
 
 \begin{article}
 
 \title{mapeAr: aplicación interactiva para visualizar información
 geográfica del turismo}
 
+\author{
+Elián Soutullo , 
+Juan Pablo Ruiz Nicolini }
 
-\author{Anónimo}
 
 \maketitle
 
@@ -105,7 +107,7 @@ Públicas  -  Turismo  -  Argentina  -  Shiny  -  dataviz }
 \subsection{Introducción}\label{introducciuxf3n}}
 
 La visualización de datos es un recurso útil a la hora de comunicar y
-pensar estrategias de desarrollo. En materia de política túristica, como
+pensar estrategias de desarrollo. En materia de política turística, como
 en muchas otras áreas de la administración pública, trabajar con datos
 geográficos resulta de vital importancia para la planificación y
 promoción.
@@ -150,7 +152,7 @@ Por defecto la \emph{shiny} carga una capa con la geometría de Argentina
 y su división política (provincias). Esta es la denominada \textbf{capa
 base}, sobre la cual se pueden hacer algunas modificaciones (filtrar
 provincias específicas, agregar las etiquetas con los nombres, o los
-poligonos correspondientes a la región, por ejemplo).
+polígonos correspondientes a la región, por ejemplo).
 
 Utilizando la lógica de \CRANpkg{ggplot2} (Wickham 2016), la aplicación
 permite incorporar más capas de datos georeferenciados sobre la capa
@@ -185,7 +187,7 @@ distintas geometrías, así como utilizar diferentes formatos de archivo:
 \item
   \textbf{Formatos}: en el caso de puntos es común utilizar archivos con
   extensión \emph{.xlsx} o \emph{.csv} donde se cuenta con una columna
-  para la latitud y otra para la longitud. Para represetnar líneas y
+  para la latitud y otra para la longitud. Para representar líneas y
   polígonos, se suele guardar la información en formatos específicos
   como \emph{.kml} o \emph{.geojson}.
 \end{itemize}
@@ -212,13 +214,13 @@ compartirlo, utilizarlo en documentos o presentaciones, etc.
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-shiny}{}}%
+\leavevmode\hypertarget{ref-shiny}{}%
 Chang, Winston, Joe Cheng, JJ Allaire, Carson Sievert, Barret Schloerke,
 Yihui Xie, Jeff Allen, Jonathan McPherson, Alan Dipert, and Barbara
 Borges. 2021. \emph{Shiny: Web Application Framework for r}.
 \url{https://CRAN.R-project.org/package=shiny}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-ggplot2}{}}%
+\leavevmode\hypertarget{ref-ggplot2}{}%
 Wickham, Hadley. 2016. \emph{Ggplot2: Elegant Graphics for Data
 Analysis}. Springer-Verlag New York.
 \url{https://ggplot2.tidyverse.org}.

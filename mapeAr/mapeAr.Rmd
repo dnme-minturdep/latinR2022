@@ -30,7 +30,7 @@ biblio-style: apalike-es
 output: 
     latinr::latinr_article:
       keep_tex: true
-      anonymise: true
+      anonymise: false
 params: 
   check_is_error: FALSE
 ---
@@ -48,7 +48,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Introducción
 
-La visualización de datos es un recurso útil a la hora de comunicar y pensar estrategias de desarrollo. En materia de política túristica, como en muchas otras áreas de la administración pública, trabajar con datos geográficos resulta de vital importancia para la planificación y promoción.
+La visualización de datos es un recurso útil a la hora de comunicar y pensar estrategias de desarrollo. En materia de política turística, como en muchas otras áreas de la administración pública, trabajar con datos geográficos resulta de vital importancia para la planificación y promoción.
 
 ¿Dónde se localizan los principales atractivos turísticos de una provincia? ¿Cuál es el nivel de concentración geográfica de los destinos turísticos de un país? ¿Cómo se conectan las principales ciudades receptoras de turismo? Este tipo de preguntas puede ser respondida de manera gráfica y sencilla a través de la confección de mapas.
 
@@ -66,7 +66,7 @@ El paquete \CRANpkg{shiny} [@shiny] ofrece una oportunidad para un desarrollo de
 knitr::include_graphics("imagenes/mapear.png")
 ```
 
-Por defecto la _shiny_ carga una capa con la geometría de Argentina y su división política (provincias). Esta es la denominada **capa base**, sobre la cual se pueden hacer algunas modificaciones (filtrar provincias específicas, agregar las etiquetas con los nombres, o los poligonos correspondientes a la región, por ejemplo). 
+Por defecto la _shiny_ carga una capa con la geometría de Argentina y su división política (provincias). Esta es la denominada **capa base**, sobre la cual se pueden hacer algunas modificaciones (filtrar provincias específicas, agregar las etiquetas con los nombres, o los polígonos correspondientes a la región, por ejemplo). 
 
 Utilizando la lógica de \CRANpkg{ggplot2} [@ggplot2], la aplicación permite incorporar más capas de datos georeferenciados sobre la capa base. En la medida que se realicen incorporaciones o ajustes, los mismos se van impactando en la previsualización del mapa.
 
@@ -82,7 +82,7 @@ Al trabajar con datos de estas características se pueden representar distintas 
 
 + **Geometrías**: las principales formas de representación de datos espaciales son los **(i) puntos**, georeferenciados con una latitud y longitud (por ejemplo, las coordenadas de un hotel); las **(ii) líneas**, que representan un sucesión de puntos (por ejemplo, una ruta); y los **(iii) polígonos**, que configuran áreas (como una provincia).
 
-+ **Formatos**: en el caso de puntos es común utilizar archivos con extensión _.xlsx_ o _.csv_ donde se cuenta con una columna para la latitud y otra para la longitud. Para represetnar líneas y polígonos, se suele guardar la información en formatos específicos como _.kml_ o _.geojson_.
++ **Formatos**: en el caso de puntos es común utilizar archivos con extensión _.xlsx_ o _.csv_ donde se cuenta con una columna para la latitud y otra para la longitud. Para representar líneas y polígonos, se suele guardar la información en formatos específicos como _.kml_ o _.geojson_.
 
 Además el archivo debe cumplir con ciertos requisitos, como el formato en el que están escritas las coordenadas, de manera que la lectura de los datos sea correcta. En la aplicación se describen estos requerimientos y se provee de un archivo descargable como modelo para estructurar los datos.
 

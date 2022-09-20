@@ -10,13 +10,13 @@
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
 
-\hypersetup{pdftitle={TuRismo en Argentina},
+\hypersetup{pdftitle={Uso de R para las estadísticas de tuRismo en
+Argentina},
             pdfkeywords={Estadísticas
 Públicas; Turismo; Argentina; Software libre; Código abierto}}
 
 
-
-\hypersetup{pdfauthor=Anónimo}
+\hypersetup{pdfauthor={Juan Pablo Ruiz Nicolini, Pablo Tiscornia}}
 
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
@@ -24,6 +24,7 @@ Públicas; Turismo; Argentina; Software libre; Código abierto}}
 {\setlength{\parindent}{0pt}%
 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
 {\par}
+
 %\usepackage[hidelinks]{hyperref}
 
 \urlstyle{same}  % don't use monospace font for urls
@@ -77,15 +78,17 @@ Públicas; Turismo; Argentina; Software libre; Código abierto}}
 \begin{document}
 
 %% do not edit, for illustration only
-\sectionhead{TuRismo en Argentina}
-\year{2022}
+\sectionhead{Uso de R para las estadísticas de tuRismo en Argentina}
+\year{2021}
 
 \begin{article}
 
-\title{TuRismo en Argentina}
+\title{Uso de R para las estadísticas de tuRismo en Argentina}
 
+\author{
+Juan Pablo Ruiz Nicolini , 
+Pablo Tiscornia }
 
-\author{Anónimo}
 
 \maketitle
 
@@ -121,16 +124,16 @@ otras actividades, lleva adelante:
 \item
   la armonización, explotación y análisis de una variedad de registros
   administrativos\footnote{Ejemplos de ellos son (a) algunos producidos
-    en la orbita del MTyD - como registro de Agencias de Viajes; u
-    (b)otros gestionados y cedidos por organismos como la Dirección
+    en la órbita del MTyD - como registro de Agencias de Viajes; u (b)
+    otros gestionados y cedidos por organismos como la Dirección
     Nacional de Migraciones (DNM - para la estimación del turismo
     internacional por todas las vías); la Agencia Nacional de
     Aeronavegación Comercial (ANAC - sobre oferta y demanda de vuelos,
     tanto internacional como de cabotaje); la Comisión Nacional
     Reguladora de Transporte (CNRT - con datos de registro de servicios
-    de transporte terrerstre), o la Administración de Parques Nacionales
+    de transporte terrestre), o la Administración de Parques Nacionales
     (APN - con registros de visitaciones a áreas protegidas naturales de
-    adminsitración nacional).}.
+    administración nacional).}.
 \end{enumerate}
 
 Este conjunto de tareas requiere de una serie de procesos que implican
@@ -156,10 +159,10 @@ avanzar en un plan de trabajo para lograr esos objetivos.
   el punto de partida consistió en armar un \emph{stack} de trabajo,
   donde \textbf{R} juega un rol central;
 \item
-  se creo una instancia de capacitación interna con el objetivo de
+  se creó una instancia de capacitación interna con el objetivo de
   acercar al equipo de trabajo de la dirección (muches con experiencia
   de análisis estadístico, otres con práctica en programación en
-  diferentes \emph{softwares} -en su mayoría propietarios-) el uso de
+  diferentes \emph{softwares} -en su mayoría propietarios) el uso de
   estas nuevas herramientas y bajar la curva de aprendizaje\footnote{En
     el contexto del trabajo remoto, a causa de las restricciones a la
     movilidad por la pandemia del Covid19, esta organización nos
@@ -177,7 +180,7 @@ avanzar en un plan de trabajo para lograr esos objetivos.
   uso del \emph{software} desde un navegador\footnote{Este espacio de
     encuentro interno se formalizó luego también en un esquema de
     capacitaciones destinado a agentes que cumplen funciones técnicas en
-    las oficinas encargadas de las estadíticas de turismo, no solamente
+    las oficinas encargadas de las estadísticas de turismo, no solamente
     del gobierno nacional, sino también de gobiernos provinciales y
     locales. El material (\textbf{\emph{bookdown}} y videos de las
     capacitaciones se encuentran alojadas en
@@ -186,10 +189,10 @@ avanzar en un plan de trabajo para lograr esos objetivos.
   sistema de archivos que permite a todes hacer uso de las fuentes de
   datos necesarias para cada proceso;
 \item
-  se creo un repositorio de organización (\emph{de desarrollo}) en
+  se creó un repositorio de organización (\emph{de desarrollo}) en
   \emph{GitHub}, el cual permitió acumular la producción de código y
   trabajar con un sistema de control de versiones. Con el paso del
-  tiempo se creo un segundo repositorio (\emph{de producción}) donde
+  tiempo se armó un segundo repositorio (\emph{de producción}) donde
   paulatinamente se van publicando aplicaciones \emph{Shiny}, libros
   digitales y reportes, entre otros:
   \textbf{\url{http://github.com/dnmye-minturdep/}}.
@@ -244,7 +247,7 @@ punta. Destacamos acá:
   (\href{https://bitacora.yvera.tur.ar/}{bitacora.yvera.tur.ar})};
 \item
   micrositios de estadísticas desde una perspectiva federal: el proyecto
-  de \textbf{ARMONIZACION} antes citado
+  de \textbf{ARMONIZACIÓN} antes citado
   (\href{https://armonizacion.yvera.tur.ar/}{armonizacion.yvera.tur.ar})y
   un \textbf{MONITOR} con indicadores agrupados a nivel provincial
   (\href{https://provincias.yvera.tur.ar/}{provincias.yvera.tur.ar}).
@@ -299,40 +302,40 @@ en nuestro flujo usual de trabajo:
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-distill}{}}%
+\leavevmode\hypertarget{ref-distill}{}%
 Allaire, JJ, Rich Iannone, Alison Presmanes Hill, and Yihui Xie. 2021.
 \emph{Distill: 'R Markdown' Format for Scientific and Technical
 Writing}. \url{https://CRAN.R-project.org/package=distill}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-ckanr}{}}%
+\leavevmode\hypertarget{ref-ckanr}{}%
 Chamberlain, Scott, Imanuel Costigan, Wush Wu, Florian Mayer, and Sharla
 Gelfand. 2021. \emph{Ckanr: Client for the Comprehensive Knowledge
 Archive Network ('CKAN') API}.
 \url{https://CRAN.R-project.org/package=ckanr}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-shiny}{}}%
+\leavevmode\hypertarget{ref-shiny}{}%
 Chang, Winston, Joe Cheng, JJ Allaire, Carson Sievert, Barret Schloerke,
 Yihui Xie, Jeff Allen, Jonathan McPherson, Alan Dipert, and Barbara
 Borges. 2021. \emph{Shiny: Web Application Framework for r}.
 \url{https://CRAN.R-project.org/package=shiny}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-herramientas}{}}%
-Tiscornia, Pablo, Juan Juara, Juan Urricariet, and Juan Pablo Ruiz
+\leavevmode\hypertarget{ref-herramientas}{}%
+Tiscornia, Pablo, Juara Juan, Juan Urricariet, and Juan Pablo Ruiz
 Nicolini. 2022. \emph{Herramientas: Conjunto de Funciones Para El
 Procesamiento de Datos En La DNMyE}.
 \url{https://dnme-minturdep.github.io/herramientas/}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-comunicacion}{}}%
+\leavevmode\hypertarget{ref-comunicacion}{}%
 Tiscornia, Pablo, and Juan Pablo Ruiz Nicolini. 2022.
 \emph{Comunicacion: DNMyE - Comunicación}.
 \url{https://d4t4tur.github.io/comunicacion}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-bookdown}{}}%
+\leavevmode\hypertarget{ref-bookdown}{}%
 Xie, Yihui. 2016. \emph{Bookdown: Authoring Books and Technical
 Documents with {R} Markdown}. Boca Raton, Florida: Chapman; Hall/CRC.
 \url{https://bookdown.org/yihui/bookdown}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-pagedown}{}}%
+\leavevmode\hypertarget{ref-pagedown}{}%
 Xie, Yihui, Romain Lesur, Brent Thorne, and Xianying Tan. 2021.
 \emph{Pagedown: Paginate the HTML Output of r Markdown with CSS for
 Print}. \url{https://CRAN.R-project.org/package=pagedown}.

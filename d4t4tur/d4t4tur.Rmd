@@ -1,7 +1,7 @@
 ---
 type: oral   # List of types is available using latinr_types()
 language: spanish
-title: "TuRismo en Argentina"
+title: "Uso de R para las estadísticas de tuRismo en Argentina"
 authors:
   - first_name: Juan Pablo
     last_name: Ruiz Nicolini
@@ -30,7 +30,7 @@ biblio-style: apalike-es
 output: 
     latinr::latinr_article:
       keep_tex: true
-      anonymise: true
+      anonymise: false
 params: 
   check_is_error: FALSE
 ---
@@ -54,7 +54,7 @@ La Dirección Nacional de Mercados y Estadísticas (DNMyE) de la Subsecretaría 
 
 [^1]: Los mismos son la ***Encuesta de Ocupación Hotelera (EOH)*** y la ***Encuesta de Turismo Internacional (ETI)***, junto al Instituto Nacional de Estadísticas y Censos (INDEC); y, por cuenta propia, la ***Encuesta de Viaje y Turismo de los Hogares (EVyTH).***
 
-[^2]: Ejemplos de ellos son (a) algunos producidos en la orbita del MTyD - como registro de Agencias de Viajes; u (b)otros gestionados y cedidos por organismos como la Dirección Nacional de Migraciones (DNM - para la estimación del turismo internacional por todas las vías); la Agencia Nacional de Aeronavegación Comercial (ANAC - sobre oferta y demanda de vuelos, tanto internacional como de cabotaje); la Comisión Nacional Reguladora de Transporte (CNRT - con datos de registro de servicios de transporte terrerstre), o la Administración de Parques Nacionales (APN - con registros de visitaciones a áreas protegidas naturales de adminsitración nacional).
+[^2]: Ejemplos de ellos son (a) algunos producidos en la órbita del MTyD - como registro de Agencias de Viajes; u (b) otros gestionados y cedidos por organismos como la Dirección Nacional de Migraciones (DNM - para la estimación del turismo internacional por todas las vías); la Agencia Nacional de Aeronavegación Comercial (ANAC - sobre oferta y demanda de vuelos, tanto internacional como de cabotaje); la Comisión Nacional Reguladora de Transporte (CNRT - con datos de registro de servicios de transporte terrestre), o la Administración de Parques Nacionales (APN - con registros de visitaciones a áreas protegidas naturales de administración nacional).
 
 
 
@@ -69,16 +69,16 @@ De un tiempo a esta parte, la DNMyE viene encarando un proyecto de transformaci�
 
 -   el punto de partida consistió en armar un *stack* de trabajo, donde **R** juega un rol central;
 
--   se creo una instancia de capacitación interna con el objetivo de acercar al equipo de trabajo de la dirección (muches con experiencia de análisis estadístico, otres con práctica en programación en diferentes *softwares* -en su mayoría propietarios-) el uso de estas nuevas herramientas y bajar la curva de aprendizaje[^3]. Esta capacitación inicial devino en encuentros semanales dedicados a compartir problemáticas específicas y avanzar sobre diferentes temáticas en cuanto el procesamiento de datos con **R**;
+-   se creó una instancia de capacitación interna con el objetivo de acercar al equipo de trabajo de la dirección (muches con experiencia de análisis estadístico, otres con práctica en programación en diferentes *softwares* -en su mayoría propietarios) el uso de estas nuevas herramientas y bajar la curva de aprendizaje[^3]. Esta capacitación inicial devino en encuentros semanales dedicados a compartir problemáticas específicas y avanzar sobre diferentes temáticas en cuanto el procesamiento de datos con **R**;
 
 -   se procuró la creación y configuración de un servidor dedicado para la DNMyE donde corre un **[RStudio Server](https://www.rstudio.com/products/rstudio/download-server/)**. En él, cada usuarie cuenta con un acceso para poder hacer uso del *software* desde un navegador[^4]. El mismo permite, además, desplegar aplicaciones (*Shiny)* y un sistema de archivos que permite a todes hacer uso de las fuentes de datos necesarias para cada proceso;
 
--   se creo un repositorio de organización (*de desarrollo*) en *GitHub*, el cual permitió acumular la producción de código y trabajar con un sistema de control de versiones. Con el paso del tiempo se creo un segundo repositorio (*de producción*) donde paulatinamente se van publicando aplicaciones *Shiny*, libros digitales y reportes, entre otros: **<http://github.com/dnmye-minturdep/>**.
+-   se creó un repositorio de organización (*de desarrollo*) en *GitHub*, el cual permitió acumular la producción de código y trabajar con un sistema de control de versiones. Con el paso del tiempo se armó un segundo repositorio (*de producción*) donde paulatinamente se van publicando aplicaciones *Shiny*, libros digitales y reportes, entre otros: **<http://github.com/dnmye-minturdep/>**.
 
 
 [^3]: En el contexto del trabajo remoto, a causa de las restricciones a la movilidad por la pandemia del Covid19, esta organización nos permitió abordar problemas de administración de bases de datos y el mantenimiento de librerías, por ejemplo, que aseguraran la reproducibilidad del trabajo.
 
-[^4]: Este espacio de encuentro interno se formalizó luego también en un esquema de capacitaciones destinado a agentes que cumplen funciones técnicas en las oficinas encargadas de las estadíticas de turismo, no solamente del gobierno nacional, sino también de gobiernos provinciales y locales. El material (**_bookdown_** y videos de las capacitaciones se encuentran alojadas en **[armonziacion.yvera.tur.ar](https://armonizacion.yvera.tur.ar/ "ARMONIZACION ESTADISTICA EN LAS PROVINCIAS")**).
+[^4]: Este espacio de encuentro interno se formalizó luego también en un esquema de capacitaciones destinado a agentes que cumplen funciones técnicas en las oficinas encargadas de las estadísticas de turismo, no solamente del gobierno nacional, sino también de gobiernos provinciales y locales. El material (**_bookdown_** y videos de las capacitaciones se encuentran alojadas en **[armonziacion.yvera.tur.ar](https://armonizacion.yvera.tur.ar/ "ARMONIZACION ESTADISTICA EN LAS PROVINCIAS")**).
 
 
 
@@ -102,7 +102,7 @@ El [**Sistema de Información Turística de la Argentina (SINTA)**](https://www.
 
   -   el *blog* **BITÁCORA ([bitacora.yvera.tur.ar](https://bitacora.yvera.tur.ar/ "BLOG - Bitácora del Turismo en Argentina"))**;
 
-  -   micrositios de estadísticas desde una perspectiva federal: el proyecto de **ARMONIZACION** antes citado ([armonizacion.yvera.tur.ar](https://armonizacion.yvera.tur.ar/ "ARMONIZACION ESTADISTICA EN LAS PROVINCIAS"))y un **MONITOR** con indicadores agrupados a nivel provincial ([provincias.yvera.tur.ar](https://provincias.yvera.tur.ar/ "MONITOR del turismo en las provincias")).
+  -   micrositios de estadísticas desde una perspectiva federal: el proyecto de **ARMONIZACIÓN** antes citado ([armonizacion.yvera.tur.ar](https://armonizacion.yvera.tur.ar/ "ARMONIZACION ESTADISTICA EN LAS PROVINCIAS"))y un **MONITOR** con indicadores agrupados a nivel provincial ([provincias.yvera.tur.ar](https://provincias.yvera.tur.ar/ "MONITOR del turismo en las provincias")).
 
   -   un micrositio para la consulta interactiva de últimos datos - **REPORTES**- e información desagregada en -**TABLEROS** ([tableros.yvera.tur.ar](https://tableros.yvera.tur.ar/)).
 
